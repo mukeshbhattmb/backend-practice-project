@@ -3,6 +3,11 @@ import { DB_NAME } from "../constants.js";
 
 const connectDB = async () => {
     try {
+        console.log("MONGODB_URI: ", process.env.MONGODB_URI)
+        console.log("CLOUDINARY_CLOUD_NAME: ", process.env.CLOUDINARY_CLOUD_NAME)
+        console.log("CLOUDINARY_API_KEY: ", process.env.CLOUDINARY_API_KEY)
+        console.log("CLOUDINARY_API_SECRET: ", process.env.CLOUDINARY_API_SECRET)
+        
         
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
 
